@@ -141,7 +141,7 @@ export default function Pmjay({ language }: PmjayProps) {
               </ul>
 
               <div className="pt-4 mt-4 border-t border-emerald-800 text-[11px] text-emerald-200">
-                💡 {isEn ? 'Call our helpdesk line anytime for Golden Card generation questions: +91 91515 15151' : 'गोल्डन कार्ड बनवाने या सहायता के लिए हेल्पडेस्क नंबर पर कॉल करें: +91 91515 15151'}
+                💡 {isEn ? 'Call our helpdesk line anytime for Golden Card generation questions: +91 8669062143' : 'गोल्डन कार्ड बनवाने या सहायता के लिए हेल्पडेस्क नंबर पर कॉल करें: +91 8669062143'}
               </div>
             </div>
 
