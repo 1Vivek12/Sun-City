@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stethoscope, Phone, Shield, Globe, Award, ClipboardList } from 'lucide-react';
+import { Stethoscope, Phone, Shield, Globe, Award, ClipboardList, Youtube, Instagram, Facebook } from 'lucide-react';
 
 interface HeaderProps {
   language: 'hi' | 'en';
@@ -31,6 +31,11 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
             </span>
             <span className="hidden md:inline text-emerald-200">|</span>
             <span className="hidden md:inline text-emerald-100">📍 {isEn ? 'Gorakhpur, Uttar Pradesh' : 'गोरखपुर, उत्तर प्रदेश'}</span>
+            <span className="flex items-center gap-2 ml-2">
+              <a href="https://www.youtube.com/@SunCityGorakhpur" target="_blank" rel="noopener noreferrer" className="hover:text-white"><Youtube className="h-5 w-5" /></a>
+              <a href="https://www.instagram.com/suncitygkp?igsh=MXZpZnpta3Rsd21icA==" target="_blank" rel="noopener noreferrer" className="hover:text-white"><Instagram className="h-5 w-5" /></a>
+              <a href="https://www.facebook.com/share/1Cm3nWcRDS/" target="_blank" rel="noopener noreferrer" className="hover:text-white"><Facebook className="h-5 w-5" /></a>
+            </span>
           </div>
 
           <div className="flex items-center gap-4">
