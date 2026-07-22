@@ -133,7 +133,8 @@ export default function HeroHeader({ language, onNavigate }: HeroHeaderProps) {
                     <p className="text-[9px] text-red-200 font-bold uppercase tracking-wider">
                       {isEn ? "Emergency Hotline" : "आपातकालीन नंबर"}
                     </p>
-                    <p className="text-base font-extrabold">+91 866 906 2143</p>
+                    <p className="text-base font-extrabold">+91 7607781656</p>
+                    <p className="text-sm font-bold text-red-100">+91 8669062143</p>
                   </div>
                 </div>
               </a>

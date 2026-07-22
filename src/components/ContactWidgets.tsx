@@ -6,8 +6,8 @@ interface ContactWidgetsProps {
 }
 
 export default function ContactWidgets({ language }: ContactWidgetsProps) {
-  const whatsappNumber = "+918669062143"; 
-  const phoneNumber = "+918669062143";
+  const whatsappNumber = "+917607781656"; 
+  const phoneNumber = "+917607781656";
   const whatsappMessage = language === 'en' ? "Hello, I want to book an appointment." : "नमस्ते, मुझे अपॉइंटमेंट बुक करना है।";
   
   return (

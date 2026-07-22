@@ -135,7 +135,7 @@ export default function DoctorShowcase({ language, onBookWithDoctor }: DoctorSho
                     <p className={`${styles.text} font-semibold mt-1 mb-2 text-lg`}>
                       {isEn ? doc.specialtyEn : doc.specialtyHi}
                     </p>
-                    <div className="bg-slate-50 px-3 py-2 rounded-xl border border-slate-100 inline-block w-fit mt-1 mb-4">
+                    <div className="bg-slate-50 px-3 py-2 rounded-xl border border-slate-100 inline-block w-fit mx-auto sm:mx-0 mt-1 mb-4">
                       <p className="text-sm text-slate-700 font-medium whitespace-pre-wrap leading-relaxed">
                         {doc.qualifications}
                       </p>
@@ -143,7 +143,7 @@ export default function DoctorShowcase({ language, onBookWithDoctor }: DoctorSho
                     {onBookWithDoctor && (
                       <button
                         onClick={() => onBookWithDoctor(doc.doctorId, doc.deptId)}
-                        className={`mt-auto w-fit bg-gradient-to-r ${styles.gradient} text-white font-bold py-2.5 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 text-sm`}
+                        className={`mt-auto w-fit mx-auto sm:mx-0 bg-gradient-to-r ${styles.gradient} text-white font-bold py-2.5 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 text-sm`}
                       >
                         {isEn ? 'Book Appointment' : 'अपॉइंटमेंट बुक करें'}
                       </button>

@@ -30,12 +30,6 @@ export default function BottomNavigation({ language, activeSection, onNavigate }
       icon: CalendarRange,
     },
     {
-      id: 'bookings',
-      labelEn: 'My Bookings',
-      labelHi: 'पर्ची',
-      icon: FolderOpen,
-    },
-    {
       id: 'pmjay',
       labelEn: 'Ayushman',
       labelHi: 'आयुष्मान',

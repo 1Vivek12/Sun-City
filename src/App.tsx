@@ -3,9 +3,9 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Departments from './components/Departments';
 import Doctors from './components/Doctors';
+import DirectorProfile from './components/DirectorProfile';
 import Pmjay from './components/Pmjay';
 import BookingForm from './components/BookingForm';
-import MyBookings from './components/MyBookings';
 import BlogSection from './components/BlogSection';
 import TrustDiagnostic from './components/TrustDiagnostic';
 import Footer from './components/Footer';
@@ -90,6 +90,7 @@ export default function App() {
         <main className="flex-grow">
           {activeSection === 'hero' && <Hero language={language} onNavigate={navigateTo} onBookWithDoctor={handleBookWithDoctor} />}
           {activeSection === 'departments' && <Departments language={language} onBookWithDept={handleBookWithDept} />}
+          {activeSection === 'director' && <DirectorProfile language={language} />}
           {activeSection === 'doctors' && <Doctors language={language} onBookWithDoctor={handleBookWithDoctor} />}
           {activeSection === 'trust-diagnostic' && <TrustDiagnostic language={language} />}
           {activeSection === 'pmjay' && <Pmjay language={language} />}
@@ -102,7 +103,6 @@ export default function App() {
               preselectedItemName={preselectedItemName}
             />
           )}
-          {activeSection === 'bookings' && <MyBookings language={language} />}
           {activeSection === 'blog' && <BlogSection language={language} />}
         </main>
       </div>

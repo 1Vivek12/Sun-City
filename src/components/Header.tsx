@@ -14,10 +14,10 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
   const navItems = [
     { id: 'departments', labelEn: 'Departments', labelHi: 'विभाग' },
     { id: 'doctors', labelEn: 'Doctors', labelHi: 'डॉक्टर' },
+    { id: 'director', labelEn: 'Our Director', labelHi: 'निदेशक (MD)' },
     { id: 'trust-diagnostic', labelEn: 'Trust Diagnostic', labelHi: 'ट्रस्ट डायग्नोस्टिक' },
     { id: 'pmjay', labelEn: 'PM-JAY (Ayushman)', labelHi: 'आयुष्मान योजना' },
-    { id: 'infrastructure', labelEn: 'Infrastructure', labelHi: 'बुनियादी ढांचा' },
-    { id: 'bookings', labelEn: 'My Bookings', labelHi: 'मेरी बुकिंग' }
+    { id: 'infrastructure', labelEn: 'Infrastructure', labelHi: 'बुनियादी ढांचा' }
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-4 text-emerald-100">
             <span className="flex items-center gap-1.5 bg-emerald-950/40 px-2 py-1 rounded-full border border-emerald-500/20 shadow-inner">
-              🚨 {isEn ? '24/7 Emergency:' : '24/7 आपातकालीन सेवा:'} <strong className="text-white">+91 866 906 2143</strong>
+              🚨 {isEn ? '24/7 Emergency:' : '24/7 आपातकालीन सेवा:'} <strong className="text-white">7607781656, 8669062143</strong>
             </span>
             <span className="hidden md:inline text-emerald-200">|</span>
             <span className="hidden md:inline text-emerald-100">📍 {isEn ? 'Gorakhpur, Uttar Pradesh' : 'गोरखपुर, उत्तर प्रदेश'}</span>

@@ -76,14 +76,25 @@ export default function OperationalHours({ language, onNavigate }: OperationalHo
             <div className="space-y-3 pt-2 border-t border-slate-700/60">
               <div>
                 <p className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">{isEn ? 'HOSPITAL ADDRESS' : 'अस्पताल का मुख्य पता'}</p>
-                <p className="text-xs md:text-sm text-slate-100 font-medium mt-1">
-                  {isEn ? 'Sun City Hospital, Gorakhpur, Uttar Pradesh - 273001' : 'सन सिटी हॉस्पिटल, गोरखपुर, उत्तर प्रदेश - २७३००१'}
-                </p>
+                <a 
+                  href="https://share.google/YcWbBZ4XXarzoGzt7" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="block group mt-1"
+                >
+                  <p className="text-xs md:text-sm text-slate-100 font-medium group-hover:text-emerald-300 transition-colors">
+                    {isEn ? 'NH-28, Near Padleganj Police Chowki, Gorakhpur 273008' : 'एन. एच. - 28, निकट पैडलेगंज पुलिस चौकी, गोरखपुर 273008'}
+                  </p>
+                  <p className="text-[10px] text-emerald-400 mt-1 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <MapPin className="h-3 w-3" /> {isEn ? 'View on Google Maps' : 'गूगल मैप्स पर देखें'}
+                  </p>
+                </a>
               </div>
               <div>
                 <p className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">{isEn ? 'GET PHONE ASSISTANCE' : 'दूरभाष संपर्क सूत्र'}</p>
-                <p className="text-xs md:text-sm text-slate-100 font-bold mt-1">
-                  +91 91515 15151 / +91 91515 15152
+                <p className="text-xs md:text-sm text-slate-100 font-bold mt-1 flex flex-col gap-1">
+                  <span>+91 7607781656</span>
+                  <span>+91 8669062143</span>
                 </p>
               </div>
             </div>

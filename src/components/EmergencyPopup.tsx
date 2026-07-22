@@ -17,7 +17,8 @@ export default function EmergencyPopup({ language }: EmergencyPopupProps) {
 
   const onClose = () => setIsOpen(false);
   const isEn = language === 'en';
-  const emergencyNumber = '+918669062143';
+  const emergencyNumber1 = '+917607781656';
+  const emergencyNumber2 = '+918669062143';
 
   return (
     <AnimatePresence>
@@ -57,29 +58,40 @@ export default function EmergencyPopup({ language }: EmergencyPopupProps) {
                 {isEn ? 'How would you like to reach us?' : 'आप हमसे कैसे संपर्क करना चाहेंगे?'}
               </p>
               <p className="text-lg font-bold text-emerald-600 mt-1">
-                +91 866 906 2143
+                +91 7607781656 <br/> +91 8669062143
               </p>
             </div>
 
             <div className="space-y-4">
-              <a
-                href={`tel:${emergencyNumber}`}
-                className="w-full flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-900 text-white p-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1 hover:shadow-lg"
-                onClick={onClose}
-              >
-                <Phone className="w-6 h-6 text-emerald-400 animate-pulse" />
-                <span>{isEn ? 'Call Now' : 'अभी कॉल करें'}</span>
-              </a>
+              <div className="flex gap-3">
+                <a
+                  href={`tel:${emergencyNumber1}`}
+                  className="flex-1 flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-900 text-white p-3 rounded-2xl font-bold transition-all transform hover:-translate-y-1 hover:shadow-lg"
+                  onClick={onClose}
+                >
+                  <Phone className="w-5 h-5 text-emerald-400 animate-pulse" />
+                  <span className="text-xs">{isEn ? 'Call Num 1' : 'कॉल (१)'}</span>
+                </a>
+                
+                <a
+                  href={`tel:${emergencyNumber2}`}
+                  className="flex-1 flex flex-col items-center justify-center gap-1 bg-slate-800 hover:bg-slate-900 text-white p-3 rounded-2xl font-bold transition-all transform hover:-translate-y-1 hover:shadow-lg"
+                  onClick={onClose}
+                >
+                  <Phone className="w-5 h-5 text-emerald-400 animate-pulse" />
+                  <span className="text-xs">{isEn ? 'Call Num 2' : 'कॉल (२)'}</span>
+                </a>
+              </div>
               
               <a
-                href={`https://wa.me/${emergencyNumber.replace('+', '')}`}
+                href={`https://wa.me/${emergencyNumber1.replace('+', '')}`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full flex items-center justify-center gap-3 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 p-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1 hover:shadow-md border border-emerald-200"
                 onClick={onClose}
               >
                 <MessageCircle className="w-6 h-6 text-emerald-600" />
-                <span>{isEn ? 'WhatsApp' : 'व्हाट्सएप करें'}</span>
+                <span>{isEn ? 'WhatsApp Us' : 'व्हाट्सएप करें'}</span>
               </a>
             </div>
           </motion.div>
