@@ -1,5 +1,5 @@
-import React from 'react';
-import { Stethoscope, Phone, Shield, Globe, Award, ClipboardList, Youtube, Instagram, Facebook } from 'lucide-react';
+import React, { useState } from 'react';
+import { Stethoscope, Phone, Shield, Globe, Award, ClipboardList, Youtube, Instagram, Facebook, Menu, X, ChevronRight } from 'lucide-react';
 
 interface HeaderProps {
   language: 'hi' | 'en';
@@ -10,6 +10,7 @@ interface HeaderProps {
 
 export default function Header({ language, setLanguage, onNavigate, activeSection }: HeaderProps) {
   const isEn = language === 'en';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
     { id: 'departments', labelEn: 'Departments', labelHi: 'विभाग' },
@@ -20,8 +21,13 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
     { id: 'infrastructure', labelEn: 'Infrastructure', labelHi: 'बुनियादी ढांचा' }
   ];
 
+  const handleNavClick = (id: string) => {
+    onNavigate(id);
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-emerald-100 shadow-sm">
       {/* Top emergency & language bar */}
       <div className="bg-emerald-900 text-emerald-50 px-2 sm:px-4 py-1.5 text-[10px] sm:text-xs md:text-sm font-medium">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-1.5 sm:gap-2">
@@ -57,39 +63,39 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
       </div>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 py-2.5 md:py-4 flex justify-between items-center">
         {/* Brand Logo */}
         <div 
-          onClick={() => onNavigate('hero')}
-          className="flex items-center gap-3.5 cursor-pointer group"
+          onClick={() => handleNavClick('hero')}
+          className="flex items-center gap-3 cursor-pointer group"
           id="brand-logo"
         >
-          <div className="h-12 w-12 md:h-14 md:w-14 bg-white rounded-full flex items-center justify-center shadow-md border border-emerald-100 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+          <div className="h-11 w-11 md:h-14 md:w-14 bg-white rounded-full flex items-center justify-center shadow-md border border-emerald-100 group-hover:scale-105 transition-transform duration-300 overflow-hidden shrink-0">
             <img src="/logo.png" alt="Sun City Hospital Logo" className="h-full w-full object-contain p-0.5" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <h1 className="text-lg md:text-2xl font-bold text-slate-800 tracking-tight leading-none">
+              <h1 className="text-base md:text-2xl font-extrabold text-slate-800 tracking-tight leading-none">
                 SUN CITY
               </h1>
-              <span className="text-emerald-600 font-extrabold text-xs md:text-sm px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-100">
+              <span className="text-emerald-600 font-extrabold text-[10px] md:text-sm px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-100">
                 HOSPITAL
               </span>
             </div>
-            <p className="text-[10px] md:text-xs text-slate-500 font-medium tracking-wide mt-0.5">
+            <p className="text-[9px] md:text-xs text-slate-500 font-medium tracking-wide mt-0.5">
               {isEn ? 'Multi Speciality • Gorakhpur' : 'मल्टी स्पेशलिटी • गोरखपुर'}
             </p>
           </div>
         </div>
 
-        {/* Navigation Links */}
+        {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
               <button
                 key={item.id}
-                onClick={() => onNavigate(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className={`text-sm font-semibold transition-colors duration-200 relative py-1 ${
                   isActive ? 'text-emerald-700' : 'text-slate-600 hover:text-emerald-600'
                 }`}
@@ -104,38 +110,99 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
           })}
         </nav>
 
-        {/* Quick CTA */}
+        {/* Action Buttons */}
         <div className="flex items-center gap-2">
-          {/* Language toggle on mobile header directly for easy accessibility */}
-          <button
-            onClick={() => setLanguage(isEn ? 'hi' : 'en')}
-            className="flex items-center gap-1.5 bg-emerald-50 hover:bg-emerald-100 border border-emerald-100/80 text-emerald-800 px-2.5 py-1.5 rounded-lg text-xs transition lg:hidden font-extrabold"
-            id="mobile-lang-toggle"
-          >
-            <Globe className="h-3.5 w-3.5 text-emerald-600" />
-            <span>{isEn ? 'हिंदी' : 'EN'}</span>
-          </button>
-
-          {/* Call button on mobile */}
+          {/* Emergency Call button on mobile & desktop */}
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event('open-emergency')); }}
-            className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 md:px-5 py-2 md:py-2.5 rounded-full md:rounded-xl font-bold transition shadow-lg shadow-red-950 shrink-0 text-sm md:text-base animate-pulse md:animate-none"
+            className="flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 md:px-5 py-1.5 md:py-2.5 rounded-full md:rounded-xl font-bold transition shadow-md shrink-0 text-xs md:text-base animate-pulse md:animate-none"
           >
-            <Phone className="h-4 w-4 animate-pulse" />
+            <Phone className="h-3.5 w-3.5 md:h-4 md:w-4" />
+            <span className="hidden sm:inline">{isEn ? 'Emergency' : 'इमरजेंसी'}</span>
           </a>
 
           {/* Desktop-only Book Appointment button */}
           <button
-            onClick={() => onNavigate('booking')}
+            onClick={() => handleNavClick('booking')}
             className="hidden lg:flex bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2.5 rounded-lg shadow-md hover:shadow-emerald-100 transition-all items-center gap-1.5"
             id="header-book-btn"
           >
             <ClipboardList className="h-4 w-4" />
             <span>{isEn ? 'Book Appointment' : 'अपॉइंटमेंट बुक करें'}</span>
           </button>
+
+          {/* Mobile Hamburger Menu Toggle Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 lg:hidden border border-slate-200 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Horizontal Scrollable Mobile Nav Bar (All 6 Tabs Visible On Mobile) */}
+      <div className="lg:hidden bg-slate-50/90 border-t border-slate-200/80 px-2 py-1.5 overflow-x-auto scrollbar-none">
+        <div className="flex items-center gap-1.5 min-w-max px-1">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleNavClick(item.id)}
+                className={`text-[11px] font-bold px-3 py-1 rounded-full transition-all whitespace-nowrap cursor-pointer ${
+                  isActive
+                    ? 'bg-emerald-600 text-white shadow-sm'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:bg-emerald-50 hover:border-emerald-200'
+                }`}
+              >
+                {isEn ? item.labelEn : item.labelHi}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Dropdown Drawer Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-white border-b border-slate-200 shadow-xl px-4 py-4 space-y-2 animate-fadeIn">
+          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 px-2">
+            {isEn ? 'Hospital Navigation' : 'मुख्य मेनू'}
+          </div>
+
+          <div className="grid grid-cols-1 gap-1">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
+                  className={`flex items-center justify-between w-full px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                    isActive
+                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-100'
+                      : 'text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  <span>{isEn ? item.labelEn : item.labelHi}</span>
+                  <ChevronRight className="h-4 w-4 text-slate-400" />
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+            <button
+              onClick={() => handleNavClick('booking')}
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-2.5 rounded-xl shadow flex items-center justify-center gap-1.5"
+            >
+              <ClipboardList className="h-4 w-4" />
+              <span>{isEn ? 'Book Appointment' : 'अपॉइंटमेंट बुक करें'}</span>
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
