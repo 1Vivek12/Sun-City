@@ -23,30 +23,30 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
   return (
     <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-emerald-100 shadow-sm">
       {/* Top emergency & language bar */}
-      <div className="hidden md:block bg-emerald-900 text-emerald-50 px-4 py-2 text-xs md:text-sm font-medium">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-4 text-emerald-100">
-            <span className="flex items-center gap-1.5 bg-emerald-950/40 px-2 py-1 rounded-full border border-emerald-500/20 shadow-inner">
-              🚨 {isEn ? '24/7 Emergency:' : '24/7 आपातकालीन सेवा:'} <strong className="text-white">7607781656, 8669062143</strong>
+      <div className="bg-emerald-900 text-emerald-50 px-2 sm:px-4 py-1.5 text-[10px] sm:text-xs md:text-sm font-medium">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-1.5 sm:gap-2">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-emerald-100">
+            <span className="flex items-center gap-1 bg-emerald-950/50 px-2 py-0.5 sm:py-1 rounded-full border border-emerald-500/20 text-[10px] sm:text-xs">
+              🚨 {isEn ? '24/7:' : '24/7:'} <strong className="text-white font-bold">7607781656, 8669062143</strong>
             </span>
-            <span className="hidden md:inline text-emerald-200">|</span>
-            <span className="hidden md:inline text-emerald-100">📍 {isEn ? 'Gorakhpur, Uttar Pradesh' : 'गोरखपुर, उत्तर प्रदेश'}</span>
-            <span className="flex items-center gap-2 ml-2">
-              <a href="https://www.youtube.com/@SunCityGorakhpur" target="_blank" rel="noopener noreferrer" className="hover:text-white"><Youtube className="h-5 w-5" /></a>
-              <a href="https://www.instagram.com/suncitygkp?igsh=MXZpZnpta3Rsd21icA==" target="_blank" rel="noopener noreferrer" className="hover:text-white"><Instagram className="h-5 w-5" /></a>
-              <a href="https://www.facebook.com/share/1Cm3nWcRDS/" target="_blank" rel="noopener noreferrer" className="hover:text-white"><Facebook className="h-5 w-5" /></a>
+            <span className="hidden sm:inline text-emerald-200">|</span>
+            <span className="hidden sm:inline text-emerald-100">📍 {isEn ? 'Gorakhpur, UP' : 'गोरखपुर, यू.पी.'}</span>
+            <span className="flex items-center gap-2 ml-1">
+              <a href="https://www.youtube.com/@SunCityGorakhpur" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors"><Youtube className="h-4 w-4 sm:h-5 sm:w-5" /></a>
+              <a href="https://www.instagram.com/suncitygkp?igsh=MXZpZnpta3Rsd21icA==" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors"><Instagram className="h-4 w-4 sm:h-5 sm:w-5" /></a>
+              <a href="https://www.facebook.com/share/1Cm3nWcRDS/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors"><Facebook className="h-4 w-4 sm:h-5 sm:w-5" /></a>
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5 text-yellow-300">
-              <Award className="h-3.5 w-3.5" />
-              <span>{isEn ? 'PM-JAY Free Cashless Treatment' : 'आयुष्मान भारत कैशलेस इलाज'}</span>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <span className="hidden xs:flex items-center gap-1 text-yellow-300 text-[10px] sm:text-xs">
+              <Award className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+              <span>{isEn ? 'PM-JAY Free Treatment' : 'आयुष्मान मुफ़्त इलाज'}</span>
             </span>
             
             <button
               onClick={() => setLanguage(isEn ? 'hi' : 'en')}
-              className="flex items-center gap-1 bg-emerald-800 hover:bg-emerald-700 px-2.5 py-1 rounded text-xs transition border border-emerald-700"
+              className="flex items-center gap-1 bg-emerald-800 hover:bg-emerald-700 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded text-[10px] sm:text-xs transition border border-emerald-700"
               id="lang-toggle-btn"
             >
               <Globe className="h-3 w-3 text-emerald-300" />
