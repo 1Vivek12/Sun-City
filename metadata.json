@@ -1,0 +1,6 @@
+{
+  "name": "Sun City Hospital",
+  "description": "A premium medical portal for Sun City Hospital, Gorakhpur. Includes doctor profiles, appointment booking, departments list, medical packages, and an bilingual AI health assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
