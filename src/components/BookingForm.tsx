@@ -98,6 +98,17 @@ export default function BookingForm({
         doctor: formData.doctorId
       });
 
+      // Prepare WhatsApp Message
+      const deptName = getDeptName(formData.departmentId);
+      const doctorName = getDoctorName(formData.doctorId);
+      
+      const whatsappMessage = `*New Appointment Booking* 🏥\n\n*Name:* ${formData.patientName}\n*Phone:* ${formData.patientPhone}\n*Department:* ${deptName}\n*Doctor:* ${doctorName}\n*Date:* ${formData.date}\n*Time:* ${formData.timeSlot}${formData.symptoms ? `\n*Symptoms:* ${formData.symptoms}` : ''}`;
+      
+      const whatsappUrl = `https://wa.me/918669062143?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, '_blank');
+
       setSuccessBooking(newBooking);
       
       // Reset form
