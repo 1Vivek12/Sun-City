@@ -20,6 +20,9 @@ export interface Doctor {
   experience: string;
   availability: string;
   isAvailableToday?: boolean;
+  achievements?: string[];
+  image?: string;
+  isManagingDirector?: boolean;
 }
 
 export interface DiagnosticTest {

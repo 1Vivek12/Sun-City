@@ -95,12 +95,50 @@ export default function HeroHeader({ language, onNavigate }: HeroHeaderProps) {
             </motion.div>
           </div>
 
-          {/* Right Column: Premium Hotline Widget */}
-          <div className="lg:col-span-4">
+          {/* Right Column: Director Spotlight + Emergency Hotline Widget */}
+          <div className="lg:col-span-4 space-y-6">
+            {/* Managing Director Featured Spotlight */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              onClick={() => onNavigate('director')}
+              className="bg-gradient-to-br from-red-900/90 via-slate-900/90 to-red-950/90 backdrop-blur-md border border-red-500/40 p-4 sm:p-5 rounded-3xl shadow-2xl relative overflow-hidden group cursor-pointer hover:border-red-400 transition-all duration-300"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all" />
+              
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="relative shrink-0">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-0.5 bg-gradient-to-tr from-yellow-400 via-red-500 to-rose-400 shadow-xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                    <img src="/dr-abhay-desk.jpg" alt="Dr. Abhay Kumar Sharma (MD)" className="w-full h-full object-cover rounded-full" />
+                  </div>
+                  <span className="absolute -bottom-1 -right-1 bg-yellow-400 text-slate-950 p-1 rounded-full text-[10px] shadow font-black" title="City Health Award Winner 2026">
+                    👑
+                  </span>
+                </div>
+
+                <div className="space-y-1">
+                  <span className="px-2 py-0.5 rounded-full bg-red-600/80 text-white text-[9px] font-black uppercase tracking-wider border border-red-400/40">
+                    👑 {isEn ? 'Managing Director' : 'प्रबंध निदेशक (MD)'}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-extrabold text-white group-hover:text-yellow-300 transition-colors leading-tight">
+                    Dr. Abhay Kumar Sharma
+                  </h3>
+                  <p className="text-[10px] sm:text-xs text-red-200 font-semibold line-clamp-1">
+                    MBBS, MD (Pediatrics), Fellowship Healthcare
+                  </p>
+                  <p className="text-[9px] text-yellow-300 font-bold flex items-center gap-1">
+                    🏆 {isEn ? 'City Health Excellence Award 2026' : 'सिटी हेल्थ एक्सीलेंस अवॉर्ड 2026'}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Premium Hotline Widget */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-slate-900/60 backdrop-blur-md border border-slate-700/55 p-6 rounded-3xl space-y-6 shadow-2xl relative"
             >
               <div className="flex items-center gap-3">

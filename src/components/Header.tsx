@@ -64,26 +64,31 @@ export default function Header({ language, setLanguage, onNavigate, activeSectio
 
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 py-2.5 md:py-4 flex justify-between items-center">
-        {/* Brand Logo */}
+        {/* Brand Logo - Stunning Red Theme */}
         <div 
           onClick={() => handleNavClick('hero')}
           className="flex items-center gap-3 cursor-pointer group"
           id="brand-logo"
         >
-          <div className="h-11 w-11 md:h-14 md:w-14 bg-white rounded-full flex items-center justify-center shadow-md border border-emerald-100 group-hover:scale-105 transition-transform duration-300 overflow-hidden shrink-0">
-            <img src="/logo.png" alt="Sun City Hospital Logo" className="h-full w-full object-contain p-0.5" />
+          {/* Glowing Red-Gold Ring Frame */}
+          <div className="h-12 w-12 md:h-15 md:w-15 rounded-full p-[2.5px] bg-gradient-to-tr from-red-700 via-rose-500 to-red-500 shadow-[0_0_18px_rgba(225,29,72,0.35)] group-hover:shadow-[0_0_25px_rgba(225,29,72,0.55)] group-hover:scale-105 transition-all duration-300 shrink-0">
+            <div className="h-full w-full bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden">
+              <img src="/logo.png" alt="Sun City Hospital Logo" className="h-full w-full object-contain" />
+            </div>
           </div>
+
           <div>
-            <div className="flex items-center gap-1.5">
-              <h1 className="text-base md:text-2xl font-extrabold text-slate-800 tracking-tight leading-none">
+            <div className="flex items-center gap-2">
+              <h1 className="text-lg md:text-2xl font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-red-600 to-rose-600 drop-shadow-sm font-sans">
                 SUN CITY
               </h1>
-              <span className="text-emerald-600 font-extrabold text-[10px] md:text-sm px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-100">
+              <span className="bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white font-extrabold text-[9px] md:text-xs px-2 py-0.5 rounded-full shadow-md shadow-red-500/30 border border-red-400/40 tracking-wider">
                 HOSPITAL
               </span>
             </div>
-            <p className="text-[9px] md:text-xs text-slate-500 font-medium tracking-wide mt-0.5">
-              {isEn ? 'Multi Speciality • Gorakhpur' : 'मल्टी स्पेशलिटी • गोरखपुर'}
+            <p className="text-[9px] md:text-xs text-red-600 font-bold tracking-wide mt-1 flex items-center gap-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-red-600 animate-pulse" />
+              <span>{isEn ? 'Multi Speciality • Gorakhpur' : 'मल्टी स्पेशलिटी • गोरखपुर'}</span>
             </p>
           </div>
         </div>

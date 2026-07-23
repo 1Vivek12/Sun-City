@@ -125,43 +125,68 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
             const deptId = getDeptIdByName(primaryDept);
             const style = DEPT_STYLES[primaryDept] || DEFAULT_STYLE;
             const initials = getInitials(doc.name);
+            const isMD = doc.isManagingDirector || doc.id === 'dr-abhay';
 
             return (
               <div
                 key={doc.id}
-                className="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group ${
+                  isMD 
+                    ? 'border-2 border-red-500/80 shadow-red-500/10 sm:col-span-2 lg:col-span-2 ring-4 ring-red-500/10' 
+                    : 'border border-slate-100'
+                }`}
                 id={`doctor-card-${doc.id}`}
                 style={{ animationDelay: `${idx * 40}ms` }}
               >
                 <div>
-                  {/* Doctor Card Top — Gradient Avatar */}
-                  <div className={`relative h-44 bg-gradient-to-br ${style.gradient} flex flex-col items-center justify-center overflow-hidden`}>
-                    {/* Decorative circles */}
+                  {/* Doctor Card Top Header Banner */}
+                  <div className={`relative ${isMD ? 'h-52 bg-gradient-to-br from-red-700 via-rose-600 to-red-900' : `h-44 bg-gradient-to-br ${style.gradient}`} flex flex-col items-center justify-center overflow-hidden`}>
+                    {/* Decorative background effects */}
                     <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/10" />
                     <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-white/10" />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-white/5" />
 
-                    {/* Dept emoji */}
-                    <span className="absolute top-3 left-3 text-2xl opacity-60 group-hover:opacity-90 transition-opacity" aria-hidden="true">
-                      {style.icon}
-                    </span>
+                    {/* MD VIP Badge Header */}
+                    {isMD && (
+                      <div className="absolute top-3 left-3 right-3 flex justify-between items-center z-20">
+                        <span className="px-3 py-1 rounded-full bg-yellow-400 text-slate-900 text-[10px] sm:text-xs font-black uppercase tracking-wider flex items-center gap-1.5 shadow-lg border border-yellow-200">
+                          👑 {isEn ? 'Managing Director & Founder' : 'प्रबंध निदेशक व संस्थापक'}
+                        </span>
+                        <span className="px-2.5 py-1 rounded-full bg-red-950/60 backdrop-blur-md text-white text-[9px] font-extrabold uppercase tracking-wider border border-red-400/40">
+                          🌟 {isEn ? 'Award Winner 2026' : 'अवार्ड विजेता 2026'}
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Non-MD Dept emoji */}
+                    {!isMD && (
+                      <span className="absolute top-3 left-3 text-2xl opacity-60 group-hover:opacity-90 transition-opacity" aria-hidden="true">
+                        {style.icon}
+                      </span>
+                    )}
 
                     {/* Status badge */}
-                    <span className="absolute top-3 right-3 px-2 py-1 rounded bg-white/20 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 z-10 border border-white/20">
-                      <span className="h-1.5 w-1.5 rounded-full bg-green-300 animate-ping" />
-                      {isEn ? 'Available' : 'उपलब्ध'}
-                    </span>
+                    {!isMD && (
+                      <span className="absolute top-3 right-3 px-2 py-1 rounded bg-white/20 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 z-10 border border-white/20">
+                        <span className="h-1.5 w-1.5 rounded-full bg-green-300 animate-ping" />
+                        {isEn ? 'Available' : 'उपलब्ध'}
+                      </span>
+                    )}
 
-                    {/* Large Initials Avatar */}
-                    <div className="relative z-10 w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-2xl font-black text-white tracking-wider">{initials}</span>
+                    {/* Avatar Photo (or Initials if image missing) */}
+                    <div className={`relative z-10 ${isMD ? 'w-24 h-24 sm:w-28 sm:h-28 border-4 border-yellow-400 shadow-2xl mt-4' : 'w-20 h-20 border-2 border-white/40 shadow-2xl'} rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
+                      {doc.image ? (
+                        <img src={doc.image} alt={doc.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <span className="text-2xl font-black text-white tracking-wider">{initials}</span>
+                      )}
                     </div>
 
                     {/* Experience Badge */}
-                    <div className="relative z-10 mt-3">
+                    <div className="relative z-10 mt-2">
                       <div className="px-3 py-1 rounded-full bg-black/30 backdrop-blur-md border border-white/20 text-yellow-200 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5">
                         <Star className="h-3 w-3 fill-yellow-200" />
-                        <span>{doc.experience} {isEn ? 'Exp' : 'अनुभव'}</span>
+                        <span>{doc.experience}</span>
                       </div>
                     </div>
                   </div>
@@ -169,37 +194,66 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
                   {/* Doctor Info Body */}
                   <div className="p-5 space-y-3">
                     <div>
-                      <h3 className="font-extrabold text-base text-slate-800 group-hover:text-emerald-700 transition-colors leading-tight">
-                        {doc.name}
-                      </h3>
-                      <span className={`inline-block mt-1.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${style.accent}`}>
-                        {primaryDept}
-                      </span>
-                    </div>
-
-                    <div className="space-y-2 text-xs text-slate-600">
-                      {/* Education info */}
-                      <div className="flex items-start gap-2">
-                        <GraduationCap className="h-4 w-4 text-slate-400 shrink-0 mt-0.5" />
-                        <span className="line-clamp-2" title={doc.education}>
-                          {doc.education}
-                        </span>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className={`font-black ${isMD ? 'text-lg sm:text-xl text-red-700' : 'text-base text-slate-800'} group-hover:text-red-600 transition-colors leading-tight`}>
+                          {doc.name}
+                        </h3>
                       </div>
 
+                      <div className="flex flex-wrap gap-1.5 mt-2">
+                        {doc.specialties.map((spec, i) => (
+                          <span key={i} className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${isMD ? 'bg-red-50 text-red-700 border-red-200' : style.accent}`}>
+                            {spec}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="space-y-2.5 text-xs text-slate-600">
+                      {/* Detailed Education info */}
+                      <div className={`flex items-start gap-2 p-2.5 rounded-xl border ${isMD ? 'bg-red-50/60 border-red-100' : 'bg-slate-50 border-slate-100'}`}>
+                        <GraduationCap className={`h-4 w-4 shrink-0 mt-0.5 ${isMD ? 'text-red-600 font-bold' : 'text-slate-400'}`} />
+                        <div>
+                          <p className={`font-bold text-[10px] uppercase tracking-wider ${isMD ? 'text-red-700' : 'text-slate-500'}`}>
+                            {isEn ? 'Qualifications & Degrees' : 'शैक्षणिक योग्यता एवं डिग्रियां'}
+                          </p>
+                          <p className={`text-xs mt-0.5 leading-relaxed ${isMD ? 'font-bold text-slate-800' : 'text-slate-700'}`}>
+                            {doc.education}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Achievements List for Dr. Abhay / MD */}
+                      {doc.achievements && doc.achievements.length > 0 && (
+                        <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-3 rounded-xl border border-amber-200 space-y-1.5">
+                          <p className="font-extrabold text-[10px] text-amber-800 uppercase tracking-wider flex items-center gap-1">
+                            <Sparkles className="h-3.5 w-3.5 text-amber-600" />
+                            <span>{isEn ? 'Key Achievements & Leadership' : 'प्रमुख उपलब्धियां व सम्मान'}</span>
+                          </p>
+                          <ul className="space-y-1 text-[11px] font-semibold text-slate-700">
+                            {doc.achievements.map((ach, aIdx) => (
+                              <li key={aIdx} className="flex items-center gap-1.5">
+                                <span>{ach}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
                       {/* Languages */}
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 px-1">
                         <Languages className="h-4 w-4 text-slate-400 shrink-0" />
-                        <span>{doc.languages.join(', ')}</span>
+                        <span className="font-medium">{doc.languages.join(', ')}</span>
                       </div>
 
                       {/* Availability */}
-                      <div className="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-100">
+                      <div className="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
                         <Calendar className="h-4 w-4 text-slate-400 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-bold text-slate-700 text-[10px] uppercase tracking-wider">
-                            {isEn ? 'Schedule' : 'समय'}
+                            {isEn ? 'Schedule / OPD Timings' : 'समय / ओपीडी समय'}
                           </p>
-                          <p className="text-[11px] text-slate-500 mt-0.5">{doc.availability}</p>
+                          <p className="text-[11px] font-bold text-slate-700 mt-0.5">{doc.availability}</p>
                         </div>
                       </div>
                     </div>
@@ -211,10 +265,10 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
                   {onBookWithDoctor ? (
                     <button
                       onClick={() => onBookWithDoctor(doc.id, deptId)}
-                      className={`w-full py-2.5 bg-gradient-to-r ${style.gradient} hover:opacity-90 text-white font-bold text-xs md:text-sm rounded-xl transition shadow-md flex items-center justify-center gap-1.5`}
+                      className={`w-full py-2.5 md:py-3 ${isMD ? 'bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-rose-500 shadow-red-500/20' : `bg-gradient-to-r ${style.gradient} hover:opacity-90`} text-white font-extrabold text-xs md:text-sm rounded-xl transition shadow-md flex items-center justify-center gap-1.5`}
                     >
                       <UserCheck className="h-4 w-4" />
-                      <span>{isEn ? 'Request Appointment' : 'अपॉइंटमेंट बुक करें'}</span>
+                      <span>{isEn ? `Book Appointment with ${doc.name.split(' ')[1] || doc.name}` : `${doc.name} से अपॉइंटमेंट लें`}</span>
                     </button>
                   ) : (
                     <div className="text-center text-xs text-slate-400 italic">

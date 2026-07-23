@@ -196,6 +196,25 @@ export const DEPARTMENTS: Department[] = [
 ];
 
 export const DOCTORS: Doctor[] = [
+  // ─── MANAGING DIRECTOR & FOUNDER (Top Priority) ───
+  {
+    id: 'dr-abhay',
+    name: 'Dr. Abhay Kumar Sharma',
+    specialties: ['Managing Director (MD)', 'Pediatrics', 'Medicine'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MD (Pediatrics & Medicine), Fellowship in Pediatric Healthcare, Senior Consultant & Managing Director',
+    experience: '15+ Years Exp • Managing Director',
+    availability: '24x7 Emergency & OPD Available',
+    isAvailableToday: true,
+    isManagingDirector: true,
+    image: '/dr-abhay-desk.jpg',
+    achievements: [
+      '🏆 Winner of City Health Excellence Award 2026',
+      '🏥 Founder & Managing Director of Sun City Hospital',
+      '🎓 Fellowship in Pediatric Healthcare & Critical Care',
+      '🩺 10,000+ Successful Pediatric & Critical Cases'
+    ]
+  },
   // ─── न्यूरो विभाग (Neurology / Neurosurgery) ───
   {
     id: 'dr-rana-pratap',
@@ -567,16 +586,6 @@ export const DOCTORS: Doctor[] = [
     education: 'MBBS, MD (Medicine)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-abhay',
-    name: 'Dr. Abhay Kumar Sharma',
-    specialties: ['Pediatrics', 'Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, Fellowship in Pediatric, General Physician',
-    experience: '10+ Years',
-    availability: '24x7 Emergency Available',
     isAvailableToday: true
   }
 ];

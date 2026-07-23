@@ -9,6 +9,22 @@ interface DoctorShowcaseProps {
 
 const doctors = [
   {
+    id: 'dr-abhay',
+    doctorId: 'dr-abhay',
+    deptId: 'pediatrics',
+    nameEn: 'Dr. Abhay Kumar Sharma (MD)',
+    nameHi: 'डॉ. अभय कुमार शर्मा (MD)',
+    qualifications: 'MBBS, MD (Pediatrics & Medicine), Fellowship Healthcare\nManaging Director & Award Winner 2026',
+    specialtyEn: 'Managing Director & Senior Consultant',
+    specialtyHi: 'प्रबंध निदेशक एवं वरिष्ठ विशेषज्ञ',
+    icon: Stethoscope,
+    docImage: '/dr-abhay-desk.jpg',
+    sceneImage: '/award-trophy.png',
+    sceneLabelEn: 'City Health Excellence Award Winner 2026',
+    sceneLabelHi: 'सिटी हेल्थ एक्सीलेंस अवॉर्ड 2026 विजेता',
+    accentColor: 'red',
+  },
+  {
     id: 'dr-devta',
     doctorId: 'dr-devta',
     deptId: 'orthopedics',
