@@ -146,52 +146,52 @@ export const DEPARTMENTS: Department[] = [
     treatmentsHindi: ['नवजात देखभाल', 'टीकाकरण', 'बाल आईसीयू', 'विकास निगरानी']
   },
   {
-    id: 'plastic-surgery',
-    name: 'Plastic Surgery',
-    nameHindi: 'प्लास्टिक सर्जरी विभाग',
-    description: 'Reconstructive and cosmetic surgical procedures.',
-    descriptionHindi: 'पुनर्निर्माण और कॉस्मेटिक सर्जिकल प्रक्रियाएं।',
-    iconName: 'Sparkles',
-    symptoms: ['Burns', 'Scars', 'Congenital Deformities', 'Facial Injuries'],
-    symptomsHindi: ['जलना', 'निशान', 'जन्मजात विकृतियां', 'चेहरे की चोट'],
-    treatments: ['Reconstructive Surgery', 'Skin Grafting', 'Cosmetic Procedures'],
-    treatmentsHindi: ['पुनर्निर्माण सर्जरी', 'स्किन ग्राफ्टिंग', 'कॉस्मेटिक प्रक्रियाएं']
-  },
-  {
-    id: 'ayurvedic',
-    name: 'Ayurvedic',
-    nameHindi: 'आयुर्वेदिक विभाग',
-    description: 'Traditional Ayurvedic treatments and Panchakarma therapies.',
-    descriptionHindi: 'पारंपरिक आयुर्वेदिक उपचार और पंचकर्म चिकित्सा।',
-    iconName: 'Leaf',
-    symptoms: ['Chronic Pain', 'Digestive Issues', 'Stress', 'Joint Pain'],
-    symptomsHindi: ['पुराना दर्द', 'पाचन समस्या', 'तनाव', 'जोड़ों का दर्द'],
-    treatments: ['Panchakarma', 'Herbal Medicine', 'Yoga Therapy', 'Diet Counseling'],
-    treatmentsHindi: ['पंचकर्म', 'हर्बल दवा', 'योग चिकित्सा', 'आहार परामर्श']
-  },
-  {
-    id: 'physiotherapy',
-    name: 'Physiotherapy',
-    nameHindi: 'फिजियोथेरेपी विभाग',
-    description: 'Rehabilitation and physical therapy for recovery and pain management.',
-    descriptionHindi: 'पुनर्वास और दर्द प्रबंधन के लिए फिजियोथेरेपी।',
+    id: 'gastroenterology',
+    name: 'Gastroenterology',
+    nameHindi: 'गैस्ट्रो विभाग',
+    description: 'Expert treatment for digestive system, liver, stomach, and intestinal disorders.',
+    descriptionHindi: 'पाचन तंत्र, लिवर, पेट और आंतों के विकारों का विशेषज्ञ उपचार।',
     iconName: 'Activity',
-    symptoms: ['Back Pain', 'Post-Surgery Rehab', 'Sports Injuries', 'Muscle Weakness'],
-    symptomsHindi: ['कमर दर्द', 'सर्जरी के बाद पुनर्वास', 'खेल की चोटें', 'मांसपेशी कमजोरी'],
-    treatments: ['Manual Therapy', 'Electrotherapy', 'Exercise Therapy', 'Post-op Rehab'],
-    treatmentsHindi: ['मैनुअल थेरेपी', 'इलेक्ट्रोथेरेपी', 'एक्सरसाइज थेरेपी', 'ऑपरेशन बाद पुनर्वास']
+    symptoms: ['Stomach Pain', 'Acidity', 'Liver Issues', 'Digestive Problems'],
+    symptomsHindi: ['पेट दर्द', 'एसिडिटी', 'लिवर की समस्या', 'पाचन समस्या'],
+    treatments: ['Endoscopy', 'Colonoscopy', 'Gastrointestinal Care', 'Liver Treatment'],
+    treatmentsHindi: ['एंडोस्कोपी', 'कोलोनोस्कोपी', 'गैस्ट्रोइंटेस्टाइनल देखभाल', 'लिवर उपचार']
   },
   {
-    id: 'dermatology',
-    name: 'Dermatology',
-    nameHindi: 'चर्म रोग विभाग',
-    description: 'Skin care, hair and nail disorders, and cosmetic dermatology.',
-    descriptionHindi: 'त्वचा देखभाल, बाल और नाखून विकार, और कॉस्मेटिक त्वचाविज्ञान।',
-    iconName: 'Scan',
-    symptoms: ['Skin Rashes', 'Acne', 'Eczema', 'Hair Loss', 'Fungal Infections'],
-    symptomsHindi: ['त्वचा पर चकत्ते', 'मुँहासे', 'एक्जिमा', 'बालों का झड़ना', 'फंगल संक्रमण'],
-    treatments: ['Skin Biopsy', 'Laser Treatment', 'Chemical Peeling', 'PRP Therapy'],
-    treatmentsHindi: ['स्किन बायोप्सी', 'लेजर उपचार', 'केमिकल पीलिंग', 'पीआरपी थेरेपी']
+    id: 'pulmonology',
+    name: 'Pulmonology / Chest Medicine',
+    nameHindi: 'टी.बी. चेस्ट विभाग',
+    description: 'Specialized care for lung diseases, tuberculosis, asthma, and respiratory disorders.',
+    descriptionHindi: 'फेफड़ों की बीमारियों, टीबी, अस्थमा और श्वसन विकारों की विशेष देखभाल।',
+    iconName: 'Activity',
+    symptoms: ['Cough', 'Asthma', 'Shortness of Breath', 'Chest Infection'],
+    symptomsHindi: ['खांसी', 'अस्थमा', 'सांस फूलना', 'छाती का संक्रमण'],
+    treatments: ['Spirometry', 'Chest X-Ray', 'TB Treatment', 'Pulmonary Care'],
+    treatmentsHindi: ['स्पाइरोमीट्री', 'चेस्ट एक्स-रे', 'टीबी उपचार', 'पल्मोनरी देखभाल']
+  },
+  {
+    id: 'pathology',
+    name: 'Pathology',
+    nameHindi: 'पैथोलॉजी विभाग',
+    description: 'Accurate laboratory diagnostics, blood testing, and pathology reports.',
+    descriptionHindi: 'सटीक प्रयोगशाला निदान, रक्त परीक्षण और पैथोलॉजी रिपोर्ट।',
+    iconName: 'Activity',
+    symptoms: ['Fever', 'Infections', 'Routine Health Check'],
+    symptomsHindi: ['बुखार', 'संक्रमण', 'नियमित स्वास्थ्य जांच'],
+    treatments: ['Blood Tests', 'Biopsy Analysis', 'Hormone Testing', 'Diagnostic Reports'],
+    treatmentsHindi: ['रक्त परीक्षण', 'बायोप्सी विश्लेषण', 'हार्मोन परीक्षण', 'निदान रिपोर्ट']
+  },
+  {
+    id: 'facial-surgery',
+    name: 'Facial Surgery / Cosmetology',
+    nameHindi: 'चेहरे की सर्जरी',
+    description: 'Facial trauma surgery, reconstructive jaw/face procedures, and cosmetology.',
+    descriptionHindi: 'चेहरे की चोट सर्जरी, जबड़े/चेहरे का पुनर्निर्माण और कॉस्मेटोलॉजी।',
+    iconName: 'Sparkles',
+    symptoms: ['Facial Trauma', 'Jaw Pain', 'Cosmetic Concerns'],
+    symptomsHindi: ['चेहरे की चोट', 'जबड़े का दर्द', 'कॉस्मेटिक समस्याएं'],
+    treatments: ['Maxillofacial Surgery', 'Cosmetic Treatments', 'Facial Reconstruction'],
+    treatmentsHindi: ['मैक्सिलोफेशियल सर्जरी', 'कॉस्मेटिक उपचार', 'चेहरे का पुनर्निर्माण']
   }
 ];
 
@@ -200,9 +200,9 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-abhay',
     name: 'Dr. Abhay Kumar Sharma',
-    specialties: ['Managing Director (MD)', 'Pediatrics', 'Medicine'],
+    specialties: ['Managing Director (MD)', 'Pediatrics', 'General Medicine'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Pediatrics & Medicine), Fellowship in Pediatric Healthcare, Senior Consultant & Managing Director',
+    education: 'MBBS (Fellowship in Pedia), Fellowship in Diabetic, Senior Consultant & Managing Director',
     experience: '15+ Years Exp • Managing Director',
     availability: '24x7 Emergency & OPD Available',
     isAvailableToday: true,
@@ -215,6 +215,7 @@ export const DOCTORS: Doctor[] = [
       '🩺 10,000+ Successful Pediatric & Critical Cases'
     ]
   },
+
   // ─── न्यूरो विभाग (Neurology / Neurosurgery) ───
   {
     id: 'dr-rana-pratap',
@@ -231,7 +232,7 @@ export const DOCTORS: Doctor[] = [
     name: 'Dr. Rahul Gupta',
     specialties: ['Neurology / Neurosurgery'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (Neurosurgery)',
+    education: 'MBBS, MS, MCh (Neuro)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
@@ -247,20 +248,20 @@ export const DOCTORS: Doctor[] = [
     isAvailableToday: true
   },
 
-  // ─── जनरल व लेप्रोस्कोपिक सर्जरी विभाग ───
+  // ─── जनरल एवं लैप्रोस्कोपिक सर्जरी विभाग (General & Laparoscopic Surgery) ───
   {
     id: 'dr-suraj',
     name: 'Dr. Suraj Singh',
     specialties: ['General & Laparoscopic Surgery'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS, Dip MAS (Laparoscopic Surgeon)',
+    education: 'MBBS, MS, Dip. MAS',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
   {
-    id: 'dr-a-stella',
-    name: 'Dr. A. Stella',
+    id: 'dr-a-khetan',
+    name: 'Dr. A. Khetan',
     specialties: ['General & Laparoscopic Surgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, FNB',
@@ -273,65 +274,13 @@ export const DOCTORS: Doctor[] = [
     name: 'Dr. B. P. Mall',
     specialties: ['General & Laparoscopic Surgery'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (General Surgery)',
+    education: 'MBBS, MS',
     experience: '15+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
 
-  // ─── हड्डी रोग विभाग (Orthopedics) ───
-  {
-    id: 'dr-devta',
-    name: 'Dr. Devta Singh',
-    specialties: ['Orthopedics'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, D.Ortho, DNB, FRCS. Ex-RMLIMS Lucknow, Ex-AIIMS Gorakhpur',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-sk-morya',
-    name: 'Dr. S. K. Morya',
-    specialties: ['Orthopedics'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (Ortho)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-navneet',
-    name: 'Dr. Navneet Shrivastav',
-    specialties: ['Orthopedics'],
-    languages: ['Hindi', 'English'],
-    education: 'Fellowship in Joint Management',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-suresh-ortho',
-    name: 'Dr. Suresh',
-    specialties: ['Orthopedics'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (Ortho)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-rohit-elani',
-    name: 'Dr. Rohit Elani',
-    specialties: ['Orthopedics'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (Orthopaedic)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-
-  // ─── एनेस्थीसिया विभाग ───
+  // ─── एनेस्थीसिया विभाग (Anaesthesia) ───
   {
     id: 'dr-swati-agrawal',
     name: 'Dr. Swati Agrawal',
@@ -353,25 +302,77 @@ export const DOCTORS: Doctor[] = [
     isAvailableToday: true
   },
 
-  // ─── पीडिया सर्जरी ───
+  // ─── पीडिया सर्जरी (Pediatric Surgery) ───
   {
     id: 'dr-akshay-prasad',
     name: 'Dr. Akshay Prasad',
     specialties: ['Pediatric Surgery'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS, MCh (Pedo)',
+    education: 'MBBS, MS, MCh (Pedia)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
 
-  // ─── यूरोलॉजी विभाग ───
+  // ─── हड्डी रोग विभाग (Orthopedics) ───
+  {
+    id: 'dr-devta',
+    name: 'Dr. Devta Singh',
+    specialties: ['Orthopedics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, D-Ortho, DNB, PDCC',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-sk-morya',
+    name: 'Dr. S. K. Morya',
+    specialties: ['Orthopedics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MS (Ortho)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-navneet',
+    name: 'Dr. Navneet Shrivastava',
+    specialties: ['Orthopedics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, D-Ortho, Fellowship in Pain Management',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-suresh-ortho',
+    name: 'Dr. Suresh',
+    specialties: ['Orthopedics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, DNB (Ortho)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-rohit-elani',
+    name: 'Dr. Rohit Elani',
+    specialties: ['Orthopedics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MS (Orthopedic)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+
+  // ─── यूरोलॉजी विभाग (Urology) ───
   {
     id: 'dr-vinay-singh',
     name: 'Dr. Vinay Singh',
     specialties: ['Urology'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS, MS (Urology)',
+    education: 'MBBS, MS, MCh (Urology)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
@@ -387,13 +388,13 @@ export const DOCTORS: Doctor[] = [
     isAvailableToday: true
   },
 
-  // ─── स्त्री व प्रसूति रोग विभाग ───
+  // ─── स्त्री एवं प्रसूति रोग विभाग (Obstetrics & Gynecology) ───
   {
     id: 'dr-pratima',
     name: 'Dr. Pratima Sharma',
-    specialties: ['Gynecology & Obstetrics'],
+    specialties: ['Obstetrics & Gynecology'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (Obs/Gynae)',
+    education: 'MBBS, MS (Obs & Gynae)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
@@ -413,11 +414,23 @@ export const DOCTORS: Doctor[] = [
 
   // ─── गुर्दा रोग विशेषज्ञ (Nephrology) ───
   {
-    id: 'dr-sp-swaroop',
-    name: 'Dr. S. P. Swaroop',
+    id: 'dr-essar-khan',
+    name: 'Dr. Essar Khan',
     specialties: ['Nephrology'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Nephrology)',
+    education: 'MBBS, MD, DM (Nephro)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+
+  // ─── गैस्ट्रो विभाग (Gastroenterology) ───
+  {
+    id: 'dr-upendra-gupta',
+    name: 'Dr. Upendra Gupta',
+    specialties: ['Gastroenterology'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MD, DM (Gastrologist)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
@@ -425,42 +438,40 @@ export const DOCTORS: Doctor[] = [
 
   // ─── बाल रोग विभाग (Pediatrics) ───
   {
-    id: 'dr-upendra-gupta',
-    name: 'Dr. Upendra Gupta',
+    id: 'dr-suresh-narayan',
+    name: 'Dr. Suresh Narayan Singh',
     specialties: ['Pediatrics'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Pediatrics)',
+    education: 'MBBS, MD (Pedia)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-abhinav-chand',
+    name: 'Dr. Abhinav Chand Singh',
+    specialties: ['Pediatrics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MD (Pedia)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-naveen-pandey',
+    name: 'Dr. Naveen Pandey',
+    specialties: ['Pediatrics'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MD (Pedia)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
 
-  // ─── मेडिसिन विभाग ───
+  // ─── नाक, कान, गला विभाग (ENT - Ear, Nose, Throat) ───
   {
-    id: 'dr-rahul-srinet',
-    name: 'Dr. Rahul Srinet',
-    specialties: ['Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Medicine), Gold Medalist, ICU & Emergency Specialist',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (09:00 AM - 05:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-bajrang-singh',
-    name: 'Dr. Bajrang Singh',
-    specialties: ['Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Medicine)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-
-  // ─── नाक कान गला विभाग (ENT) ───
-  {
-    id: 'dr-arpit-shrivastav',
-    name: 'Dr. Arpit Shrivastav',
+    id: 'dr-arpit-shrivastava',
+    name: 'Dr. Arpit Shrivastava',
     specialties: ['ENT (Ear, Nose & Throat)'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS (ENT)',
@@ -469,25 +480,59 @@ export const DOCTORS: Doctor[] = [
     isAvailableToday: true
   },
 
-  // ─── प्लास्टिक सर्जरी विभाग ───
+  // ─── मेडिसिन विभाग (General Medicine) ───
   {
-    id: 'dr-t-chandra',
-    name: 'Dr. T. Chandra Prasad',
-    specialties: ['Plastic Surgery'],
+    id: 'dr-rahul-singh',
+    name: 'Dr. Rahul Singh',
+    specialties: ['General Medicine'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (Plastic Surgery)',
+    education: 'MBBS, MD (Medicine)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+  {
+    id: 'dr-kirti-gaurav-raizada',
+    name: 'Dr. Kirti Gaurav Raizada',
+    specialties: ['General Medicine'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, DNB (Medicine)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
 
-  // ─── आयुर्वेदिक विभाग ───
+  // ─── टी.बी. चेस्ट विभाग (Pulmonology / Chest Medicine) ───
   {
-    id: 'dr-ayodh-shrivastav',
-    name: 'Dr. Ayodh Shrivastav',
+    id: 'dr-prashant-singh',
+    name: 'Dr. Prashant Singh',
+    specialties: ['Pulmonology / Chest Medicine'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MD (Chest Physician)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+
+  // ─── पैथोलॉजी विभाग (Pathology) ───
+  {
+    id: 'dr-vasundhara-singh',
+    name: 'Dr. Vasundhara Singh',
+    specialties: ['Pathology'],
+    languages: ['Hindi', 'English'],
+    education: 'MBBS, MD (Pathology)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
+
+  // ─── आयुर्वेदिक विभाग (Ayurveda) ───
+  {
+    id: 'dr-ashok-shrivastava',
+    name: 'Dr. Ashok Shrivastava',
     specialties: ['Ayurvedic'],
     languages: ['Hindi', 'English'],
-    education: 'BAMS (Ayurveda)',
+    education: 'BAMS, MD (Ayurveda)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
@@ -497,13 +542,23 @@ export const DOCTORS: Doctor[] = [
     name: 'Dr. Gaurav Mall',
     specialties: ['Ayurvedic'],
     languages: ['Hindi', 'English'],
-    education: 'BAMS (Ayurveda)',
+    education: 'BAMS (Ortho)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
 
-  // ─── फिजियोथेरेपी विभाग ───
+  // ─── फिजियोथेरेपी विभाग (Physiotherapy) ───
+  {
+    id: 'dr-priyangu-rai',
+    name: 'Dr. Priyangu Rai',
+    specialties: ['Physiotherapy'],
+    languages: ['Hindi', 'English'],
+    education: 'BPT, MPT (Physiotherapy)',
+    experience: '10+ Years',
+    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
+    isAvailableToday: true
+  },
   {
     id: 'dr-brajesh-kumar',
     name: 'Dr. Brajesh Kumar',
@@ -514,76 +569,24 @@ export const DOCTORS: Doctor[] = [
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
-  {
-    id: 'dr-prithvi-gupt',
-    name: 'Dr. Prithvi Gupt',
-    specialties: ['Physiotherapy'],
-    languages: ['Hindi', 'English'],
-    education: 'BPT, MPT (Physiotherapy)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
 
-  // ─── चर्म रोग विभाग (Dermatology) ───
+  // ─── चेहरे की सर्जरी (Facial Surgery / Cosmetology) ───
   {
-    id: 'dr-pooja-shrivastav',
-    name: 'Dr. Pooja Shrivastav',
-    specialties: ['Dermatology'],
+    id: 'dr-srijan-shrivastava',
+    name: 'Dr. Srijan Shrivastava',
+    specialties: ['Facial Surgery / Cosmetology'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Dermatology)',
+    education: 'BDS, MDS (Face Surgeon)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true
   },
   {
-    id: 'dr-kirti-gaurav',
-    name: 'Dr. Kirti Gaurav Rajdan',
-    specialties: ['Dermatology'],
+    id: 'dr-anu-sharma',
+    name: 'Dr. Anu Sharma',
+    specialties: ['Facial Surgery / Cosmetology'],
     languages: ['Hindi', 'English'],
-    education: 'MBBS, DNB (Dermatology)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-
-  // ─── अन्य डॉक्टर्स (Other Doctors from Board) ───
-  {
-    id: 'dr-pramod',
-    name: 'Dr. Pramod',
-    specialties: ['Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MS (General Physician)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-mukesh-narayan',
-    name: 'Dr. Mukesh Narayan Singh',
-    specialties: ['Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Medicine)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-abhinav-chandra',
-    name: 'Dr. Abhinav Chandra Singh',
-    specialties: ['Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Medicine)',
-    experience: '10+ Years',
-    availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
-    isAvailableToday: true
-  },
-  {
-    id: 'dr-naveen-pandey',
-    name: 'Dr. Naveen Pandey',
-    specialties: ['Medicine'],
-    languages: ['Hindi', 'English'],
-    education: 'MBBS, MD (Medicine)',
+    education: 'BDS (Cosmetologist)',
     experience: '10+ Years',
     availability: 'Mon - Sat (10:00 AM - 04:00 PM)',
     isAvailableToday: true

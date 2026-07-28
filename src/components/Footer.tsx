@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Mail, Award, Clock, Heart, Shield } from 'lucide-react';
+import { Phone, MapPin, Mail, Award, Clock, Heart, Shield, Youtube, Instagram, Facebook } from 'lucide-react';
 
 interface FooterProps {
   language: 'hi' | 'en';
@@ -46,6 +46,11 @@ export default function Footer({ language, onNavigate }: FooterProps) {
             <a href="#" className="hover:underline">{isEn ? 'Patient Privacy Policy' : 'गोपनीयता नीति'}</a>
             <span>•</span>
             <a href="#" className="hover:underline">{isEn ? 'Accessibility Compliance' : 'अभिगम्यता अनुपालन'}</a>
+            <div className="flex gap-4 mt-2">
+              <a href="https://www.youtube.com/@SunCityGorakhpur" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Youtube className="h-5 w-5" /></a>
+              <a href="https://www.instagram.com/suncitygkp?igsh=MXZpZnpta3Rsd21icA==" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></a>
+              <a href="https://www.facebook.com/share/1Cm3nWcRDS/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Facebook className="h-5 w-5" /></a>
+            </div>
           </div>
         </div>
       </div>
