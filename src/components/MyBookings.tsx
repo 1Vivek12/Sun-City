@@ -44,7 +44,7 @@ export default function MyBookings({ language }: MyBookingsProps) {
 
   const getDocName = (id: string) => {
     const d = DOCTORS.find(doc => doc.id === id);
-    return d ? d.name : 'Consulting Doctor';
+    return d ? (isEn ? d.name : (d.nameHindi || d.name)) : (isEn ? 'Consulting Doctor' : 'परामर्शदाता डॉक्टर');
   };
 
   const getDeptName = (id: string) => {

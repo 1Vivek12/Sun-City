@@ -134,7 +134,7 @@ export function getLocalBotResponse(message: string, language: 'hi' | 'en'): str
   if (matchedDept) {
     const deptDocs = DOCTORS.filter(doc => doc.specialties.includes(matchedDept.name));
     const docNames = deptDocs.length > 0 
-      ? deptDocs.map(d => `  • ${d.name} (${d.education})`).join('\n')
+      ? deptDocs.map(d => `  • ${isEn ? d.name : (d.nameHindi || d.name)} (${d.education})`).join('\n')
       : isEn ? '  • Senior Specialists Available 24/7' : '  • वरिष्ठ विशेषज्ञ 24 घंटे उपलब्ध';
 
     return isEn
@@ -156,7 +156,7 @@ export function getLocalBotResponse(message: string, language: 'hi' | 'en'): str
     query.includes('specialist') ||
     query.includes('विशेषज्ञ')
   ) {
-    const list = DOCTORS.slice(0, 6).map(d => `• *${d.name}* - ${d.specialties[0]}`).join('\n');
+    const list = DOCTORS.slice(0, 6).map(d => `• *${isEn ? d.name : (d.nameHindi || d.name)}* - ${d.specialties[0]}`).join('\n');
     return isEn
       ? `👨‍⚕️ *Sun City Hospital Doctors (35+ Specialists)*\n\n` +
         `${list}\n\n` +

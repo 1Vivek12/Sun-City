@@ -200,6 +200,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-abhay',
     name: 'Dr. Abhay Kumar Sharma',
+    nameHindi: 'डा. अभय कुमार शर्मा',
     specialties: ['Managing Director (MD)', 'Pediatrics', 'General Medicine'],
     languages: ['Hindi', 'English'],
     education: 'MBBS (Fellowship in Pedia), Fellowship in Diabetic, Senior Consultant & Managing Director',
@@ -220,6 +221,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-rana-pratap',
     name: 'Dr. Rana Pratap Singh',
+    nameHindi: 'डा. राणा प्रताप सिंह',
     specialties: ['Neurology / Neurosurgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, MCh (Neuro)',
@@ -230,6 +232,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-rahul-gupta',
     name: 'Dr. Rahul Gupta',
+    nameHindi: 'डा. राहुल गुप्ता',
     specialties: ['Neurology / Neurosurgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, MCh (Neuro)',
@@ -240,6 +243,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-raju-khetawat',
     name: 'Dr. Raju Khetawat',
+    nameHindi: 'डा. राजू खेतावत',
     specialties: ['Neurology / Neurosurgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD, DM (Neuro)',
@@ -252,6 +256,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-suraj',
     name: 'Dr. Suraj Singh',
+    nameHindi: 'डा. सूरज सिंह',
     specialties: ['General & Laparoscopic Surgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, Dip. MAS',
@@ -262,6 +267,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-a-khetan',
     name: 'Dr. A. Khetan',
+    nameHindi: 'डा. ए. खेतान',
     specialties: ['General & Laparoscopic Surgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, FNB',
@@ -272,6 +278,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-bp-mall',
     name: 'Dr. B. P. Mall',
+    nameHindi: 'डा. बी. पी. मल्ल',
     specialties: ['General & Laparoscopic Surgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS',
@@ -284,6 +291,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-swati-agrawal',
     name: 'Dr. Swati Agrawal',
+    nameHindi: 'डा. स्वाती अग्रवाल',
     specialties: ['Anaesthesia'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Anaesthesia)',
@@ -294,6 +302,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-sp-mishra',
     name: 'Dr. S. P. Mishra',
+    nameHindi: 'डा. एस. पी. मिश्रा',
     specialties: ['Anaesthesia'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Anaesthesia)',
@@ -306,6 +315,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-akshay-prasad',
     name: 'Dr. Akshay Prasad',
+    nameHindi: 'डा. अक्षय प्रसाद',
     specialties: ['Pediatric Surgery'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, MCh (Pedia)',
@@ -318,6 +328,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-devta',
     name: 'Dr. Devta Singh',
+    nameHindi: 'डा. देवता सिंह',
     specialties: ['Orthopedics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, D-Ortho, DNB, PDCC',
@@ -328,6 +339,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-sk-morya',
     name: 'Dr. S. K. Morya',
+    nameHindi: 'डा. एस. के. मौर्या',
     specialties: ['Orthopedics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS (Ortho)',
@@ -338,6 +350,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-navneet',
     name: 'Dr. Navneet Shrivastava',
+    nameHindi: 'डा. नवनीत श्रीवास्तव',
     specialties: ['Orthopedics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, D-Ortho, Fellowship in Pain Management',
@@ -348,6 +361,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-suresh-ortho',
     name: 'Dr. Suresh',
+    nameHindi: 'डा. सुरेश',
     specialties: ['Orthopedics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, DNB (Ortho)',
@@ -358,6 +372,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-rohit-elani',
     name: 'Dr. Rohit Elani',
+    nameHindi: 'डा. रोहित एलानी',
     specialties: ['Orthopedics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS (Orthopedic)',
@@ -370,6 +385,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-vinay-singh',
     name: 'Dr. Vinay Singh',
+    nameHindi: 'डा. विनय सिंह',
     specialties: ['Urology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, MCh (Urology)',
@@ -380,6 +396,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-vivek-singh',
     name: 'Dr. Vivek Singh',
+    nameHindi: 'डा. विवेक सिंह',
     specialties: ['Urology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS, MCh (Urology)',
@@ -392,6 +409,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-pratima',
     name: 'Dr. Pratima Sharma',
+    nameHindi: 'डा. प्रतिमा शर्मा',
     specialties: ['Obstetrics & Gynecology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS (Obs & Gynae)',
@@ -404,6 +422,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-bal-govind',
     name: 'Dr. Bal Govind Singh',
+    nameHindi: 'डा. बाल गोविन्द सिंह',
     specialties: ['Cardiology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD, DM (Cardiology)',
@@ -416,6 +435,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-essar-khan',
     name: 'Dr. Essar Khan',
+    nameHindi: 'डा. एस्सार खान',
     specialties: ['Nephrology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD, DM (Nephro)',
@@ -428,6 +448,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-upendra-gupta',
     name: 'Dr. Upendra Gupta',
+    nameHindi: 'डा. उपेन्द्र गुप्ता',
     specialties: ['Gastroenterology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD, DM (Gastrologist)',
@@ -440,6 +461,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-suresh-narayan',
     name: 'Dr. Suresh Narayan Singh',
+    nameHindi: 'डा. सुरेश नारायण सिंह',
     specialties: ['Pediatrics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Pedia)',
@@ -450,6 +472,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-abhinav-chand',
     name: 'Dr. Abhinav Chand Singh',
+    nameHindi: 'डा. अभिनव चन्द सिंह',
     specialties: ['Pediatrics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Pedia)',
@@ -460,6 +483,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-naveen-pandey',
     name: 'Dr. Naveen Pandey',
+    nameHindi: 'डा. नवीन पाण्डेय',
     specialties: ['Pediatrics'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Pedia)',
@@ -472,6 +496,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-arpit-shrivastava',
     name: 'Dr. Arpit Shrivastava',
+    nameHindi: 'डा. अर्पित श्रीवास्तव',
     specialties: ['ENT (Ear, Nose & Throat)'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MS (ENT)',
@@ -484,6 +509,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-rahul-singh',
     name: 'Dr. Rahul Singh',
+    nameHindi: 'डा. राहुल सिंह',
     specialties: ['General Medicine'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Medicine)',
@@ -494,6 +520,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-kirti-gaurav-raizada',
     name: 'Dr. Kirti Gaurav Raizada',
+    nameHindi: 'डा. कीर्ति गौरव रायजादा',
     specialties: ['General Medicine'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, DNB (Medicine)',
@@ -506,6 +533,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-prashant-singh',
     name: 'Dr. Prashant Singh',
+    nameHindi: 'डा. प्रशान्त सिंह',
     specialties: ['Pulmonology / Chest Medicine'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Chest Physician)',
@@ -518,6 +546,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-vasundhara-singh',
     name: 'Dr. Vasundhara Singh',
+    nameHindi: 'डा. वसुन्धरा सिंह',
     specialties: ['Pathology'],
     languages: ['Hindi', 'English'],
     education: 'MBBS, MD (Pathology)',
@@ -530,6 +559,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-ashok-shrivastava',
     name: 'Dr. Ashok Shrivastava',
+    nameHindi: 'डा. अशोक श्रीवास्तव',
     specialties: ['Ayurvedic'],
     languages: ['Hindi', 'English'],
     education: 'BAMS, MD (Ayurveda)',
@@ -540,6 +570,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-gaurav-mall',
     name: 'Dr. Gaurav Mall',
+    nameHindi: 'डा. गौरव मल्ल',
     specialties: ['Ayurvedic'],
     languages: ['Hindi', 'English'],
     education: 'BAMS (Ortho)',
@@ -552,6 +583,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-priyangu-rai',
     name: 'Dr. Priyangu Rai',
+    nameHindi: 'डा. प्रियॉगु राय',
     specialties: ['Physiotherapy'],
     languages: ['Hindi', 'English'],
     education: 'BPT, MPT (Physiotherapy)',
@@ -562,6 +594,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-brajesh-kumar',
     name: 'Dr. Brajesh Kumar',
+    nameHindi: 'डा. ब्रजेश कुमार',
     specialties: ['Physiotherapy'],
     languages: ['Hindi', 'English'],
     education: 'BPT, MPT (Physiotherapy)',
@@ -574,6 +607,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-srijan-shrivastava',
     name: 'Dr. Srijan Shrivastava',
+    nameHindi: 'डा. सृजन श्रीवास्तव',
     specialties: ['Facial Surgery / Cosmetology'],
     languages: ['Hindi', 'English'],
     education: 'BDS, MDS (Face Surgeon)',
@@ -584,6 +618,7 @@ export const DOCTORS: Doctor[] = [
   {
     id: 'dr-anu-sharma',
     name: 'Dr. Anu Sharma',
+    nameHindi: 'डा. अनु शर्मा',
     specialties: ['Facial Surgery / Cosmetology'],
     languages: ['Hindi', 'English'],
     education: 'BDS (Cosmetologist)',

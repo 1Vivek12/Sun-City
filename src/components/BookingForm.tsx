@@ -135,7 +135,7 @@ export default function BookingForm({
 
   const getDoctorName = (id: string) => {
     const d = DOCTORS.find(doc => doc.id === id);
-    return d ? d.name : '';
+    return d ? (isEn ? d.name : (d.nameHindi || d.name)) : '';
   };
 
   const getDeptName = (id: string) => {
@@ -356,7 +356,7 @@ export default function BookingForm({
                       >
                         <option value="">{isEn ? '-- Select Doctor --' : '-- डॉक्टर चुनें --'}</option>
                         {doctorsList.map(doc => (
-                          <option key={doc.id} value={doc.id}>{doc.name}</option>
+                          <option key={doc.id} value={doc.id}>{isEn ? doc.name : (doc.nameHindi || doc.name)}</option>
                         ))}
                       </select>
                     </div>

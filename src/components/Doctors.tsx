@@ -56,6 +56,7 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
 
   const filteredDoctors = DOCTORS.filter(doc => {
     const matchesSearch = doc.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          (doc.nameHindi && doc.nameHindi.toLowerCase().includes(searchTerm.toLowerCase())) ||
                           doc.specialties.some(s => s.toLowerCase().includes(searchTerm.toLowerCase())) ||
                           doc.education.toLowerCase().includes(searchTerm.toLowerCase());
     
@@ -65,6 +66,12 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
 
   // Get unique specialties for the filter dropdown
   const allSpecialties = Array.from(new Set(DOCTORS.flatMap(d => d.specialties)));
+
+  const getDeptDisplayName = (spec: string) => {
+    if (isEn) return spec;
+    const dept = DEPARTMENTS.find(d => d.name.toLowerCase() === spec.toLowerCase());
+    return dept ? dept.nameHindi : spec;
+  };
 
   return (
     <section id="doctors" className="py-10 md:py-16">
@@ -105,12 +112,14 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
             <select
               value={selectedDeptFilter}
               onChange={(e) => setSelectedDeptFilter(e.target.value)}
-              className="px-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm font-semibold text-slate-700"
+              className="px-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm transition-all"
               id="doc-dept-filter"
             >
-              <option value="">{isEn ? "All Departments" : "सभी विभाग"}</option>
-              {allSpecialties.map(s => (
-                <option key={s} value={s}>{s}</option>
+              <option value="">{isEn ? 'All Departments' : 'सभी विभाग'}</option>
+              {allSpecialties.map(dept => (
+                <option key={dept} value={dept}>
+                  {getDeptDisplayName(dept)}
+                </option>
               ))}
             </select>
           </div>
@@ -130,6 +139,7 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
             const primaryDept = doc.specialties[0] || 'Medicine';
             const deptId = getDeptIdByName(primaryDept);
             const style = DEPT_STYLES[primaryDept] || DEFAULT_STYLE;
+            const docDisplayName = isEn ? doc.name : (doc.nameHindi || doc.name);
             const initials = getInitials(doc.name);
             const isMD = doc.isManagingDirector || doc.id === 'dr-abhay';
 
@@ -182,7 +192,7 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
                     {/* Avatar Photo (or Initials if image missing) */}
                     <div className={`relative z-10 ${isMD ? 'w-24 h-24 sm:w-28 sm:h-28 border-4 border-yellow-400 shadow-2xl mt-4' : 'w-20 h-20 border-2 border-white/40 shadow-2xl'} rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
                       {doc.image ? (
-                        <img src={doc.image} alt={doc.name} className="w-full h-full object-cover" />
+                        <img src={doc.image} alt={docDisplayName} className="w-full h-full object-cover" />
                       ) : (
                         <span className="text-2xl font-black text-white tracking-wider">{initials}</span>
                       )}
@@ -202,14 +212,14 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
                     <div>
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className={`font-black ${isMD ? 'text-lg sm:text-xl text-red-700' : 'text-base text-slate-800'} group-hover:text-red-600 transition-colors leading-tight`}>
-                          {doc.name}
+                          {docDisplayName}
                         </h3>
                       </div>
 
                       <div className="flex flex-wrap gap-1.5 mt-2">
                         {doc.specialties.map((spec, i) => (
                           <span key={i} className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${isMD ? 'bg-red-50 text-red-700 border-red-200' : style.accent}`}>
-                            {spec}
+                            {getDeptDisplayName(spec)}
                           </span>
                         ))}
                       </div>
@@ -274,7 +284,7 @@ export default function Doctors({ language, onBookWithDoctor }: DoctorsProps) {
                       className={`w-full py-2.5 md:py-3 ${isMD ? 'bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-rose-500 shadow-red-500/20' : `bg-gradient-to-r ${style.gradient} hover:opacity-90`} text-white font-extrabold text-xs md:text-sm rounded-xl transition shadow-md flex items-center justify-center gap-1.5`}
                     >
                       <UserCheck className="h-4 w-4" />
-                      <span>{isEn ? `Book Appointment with ${doc.name.split(' ')[1] || doc.name}` : `${doc.name} से अपॉइंटमेंट लें`}</span>
+                      <span>{isEn ? `Book Appointment with ${doc.name.split(' ')[1] || doc.name}` : `${docDisplayName} से अपॉइंटमेंट लें`}</span>
                     </button>
                   ) : (
                     <div className="text-center text-xs text-slate-400 italic">

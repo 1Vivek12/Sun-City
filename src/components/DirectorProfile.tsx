@@ -45,8 +45,8 @@ export default function DirectorProfile({ language }: DirectorProfileProps) {
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent flex flex-col justify-end p-8">
-              <h2 className="text-3xl font-black text-white">Dr. Abhay Kumar Sharma</h2>
-              <p className="text-emerald-400 font-bold tracking-wide text-sm mt-1">MBBS, MD (Managing Director)</p>
+              <h2 className="text-3xl font-black text-white">{isEn ? 'Dr. Abhay Kumar Sharma' : 'डा. अभय कुमार शर्मा'}</h2>
+              <p className="text-emerald-400 font-bold tracking-wide text-sm mt-1">{isEn ? 'MBBS, MD (Managing Director)' : 'एमबीबीएस, एमडी (प्रबंध निदेशक)'}</p>
             </div>
           </div>
 

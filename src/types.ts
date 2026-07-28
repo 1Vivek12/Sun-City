@@ -14,6 +14,7 @@ export interface Department {
 export interface Doctor {
   id: string;
   name: string;
+  nameHindi?: string;
   specialties: string[]; // references Department.name
   languages: string[];
   education: string;
